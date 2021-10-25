@@ -16,3 +16,4 @@ rule all:
 
 include: "rules/common.smk"
 include: "rules/other.smk"
+include: "rules/setup.smk"

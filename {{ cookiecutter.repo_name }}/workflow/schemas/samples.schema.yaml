@@ -7,11 +7,11 @@ properties:
   sample:
     type: string
     description: sample name/identifier
-  condition:
+  path:
     type: string
-    description: sample condition that will be compared during differential analysis (e.g. a treatment, a tissue time, a disease)
+    description: path to file
 
 # columns that the config/samples.tsv file must have to pass schema validation
 required:
   - sample
-  - condition
+  - path
