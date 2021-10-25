@@ -62,6 +62,15 @@ If you not only want to fix the software stack but also the underlying OS, use
 in combination with any of the modes above.
 See the [Snakemake documentation](https://snakemake.readthedocs.io/en/stable/executable.html) for further details.
 
+## Scheduler support (profiles)
+To make the most of snakemake in a scientific computing environment, typically we have to set up a [profile](https://snakemake.readthedocs.io/en/stable/executing/cli.html#profiles). 
+
+I've included a script to help you set up the SGE profile.
+
+```
+bash setup_sge_profile.sh
+```
+
 ## Testing
 
 Test cases are in the subfolder `.test`. They are automatically executed via continuous integration with [Github Actions](https://github.com/features/actions).
