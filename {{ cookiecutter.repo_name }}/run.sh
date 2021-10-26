@@ -29,7 +29,7 @@ export SGE_ROOT="/opt/uge"
 snakemake --snakefile workflow/Snakefile \
           --use-singularity \
           --singularity-args "--nv ${MOUNT}" \
-          --cluster "qsub -V -cwd -pe smp {threads} -l m_mem_free={resources.mem} -l h_rt {resources.runtime} {resources.misc} -o logs/cluster/{rule}.o\${{JOB_ID}} -j yes " \
+          --cluster "qsub -V -cwd -pe smp {threads} -l m_mem_free={resources.mem} -l h_rt {resources.runtime} {resources.misc} -j yes " \
           --default-resources mem="4G" runtime="2:0:0" \
           --directory "${PWD}" \
           --jobs 100 \
