@@ -24,6 +24,7 @@ if [ -f mounts.txt ]; then
 fi
 
 export SGE_ROOT="/opt/uge"
+export PATH=${PATH}:"/usr/sbin"
 
 # Start snakemake
 snakemake --snakefile workflow/Snakefile \
