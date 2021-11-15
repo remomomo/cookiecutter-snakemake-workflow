@@ -1,3 +1,6 @@
+# source: https://github.com/jdblischak/smk-simple-slurm, adapted.
+# 3rd party licences apply.
+
 cluster:
   mkdir -p logs/sge/{rule} &&
   qsub 
