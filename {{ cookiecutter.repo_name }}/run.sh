@@ -2,6 +2,7 @@
 
 # script that will run snakemake on the max cluster
 
+# SGE qsub settings:
 #$ -V
 #$ -cwd
 #$ -j yes
@@ -9,7 +10,13 @@
 #$ -l m_mem_free=4G
 #$ -l h_rt=168:0:0
 
-test -d logs/cluster || { >&2 echo "logs/cluster does not exist"; exit 1; }
+# slurm sbatch settings:
+#SBATCH --job-name=controljob_%j
+#SBATCH --output=snakemake_%j.log
+#SBATCH --partition=vcpu
+#SBATCH --time=48:00:00
+#SBATCH -c 1
+#SBATCH --mem 2000
 
 eval "$(conda shell.bash hook)"
 
