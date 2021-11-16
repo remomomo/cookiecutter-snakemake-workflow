@@ -31,6 +31,6 @@ snakemake --snakefile workflow/Snakefile \
           --use-singularity \
           --singularity-args "--nv ${MOUNT}" \
           --directory "${PWD}" \
-          --profile sge \
+          --profile {{scheduler}} \
           "$@"
           
