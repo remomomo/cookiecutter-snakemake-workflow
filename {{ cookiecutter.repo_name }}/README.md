@@ -23,6 +23,8 @@ If you use this workflow in a paper, don't forget to give credits to the authors
 
 Configure the workflow according to your needs via editing the files in the `config/` folder. Adjust `config.yaml` to configure the workflow execution, and `samples.tsv` to specify your sample setup.
 
+Configure your snakemake cluster profile (`sge/config.yaml` or `slurm/config.yaml`) and the header lines in `run.sh`. 
+
 ### Step 3: Install Snakemake
 
 Install Snakemake using [conda](https://conda.io/projects/conda/en/latest/user-guide/install/index.html):
