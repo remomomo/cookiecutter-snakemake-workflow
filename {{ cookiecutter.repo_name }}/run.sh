@@ -38,6 +38,6 @@ snakemake --snakefile workflow/Snakefile \
           --use-singularity \
           --singularity-args "--nv ${MOUNT}" \
           --directory "${PWD}" \
-          --profile {{scheduler}} \
+          --profile {{cookiecutter.scheduler}} \
           "$@"
           
