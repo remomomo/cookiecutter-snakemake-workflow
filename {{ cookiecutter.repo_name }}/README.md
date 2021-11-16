@@ -43,17 +43,25 @@ Activate the conda environment:
 
 Test your configuration by performing a dry-run via
 
-    snakemake --use-conda -n
+    bash run.sh -n 
 
 Execute the workflow locally via
 
-    snakemake --use-conda --cores $N
+    snakemake -s workflow/Snakefile --cores $N
 
 using `$N` cores. 
 
 To submit a job that runs snakemake, you can use `run.sh`, which contains some sensible default parameters for the MDC max-cluster.
 
-    qsub run.sh 
+    # if using sge
+    qsub run.sh <rule_name>
+    # or
+    qsub run.sh <requested/output/file>
+    
+    # if using slurm
+    sbatch run.sh <rule_name>
+    # or
+    sbatch run.sh <requested/output/file>
 
 See the [Snakemake documentation](https://snakemake.readthedocs.io/en/stable/executable.html) for further details.
 
