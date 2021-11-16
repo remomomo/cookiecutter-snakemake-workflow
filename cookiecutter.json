@@ -4,5 +4,6 @@
   "username": "rmonti",
   "project_name": "Project",
   "repo_name": "",
-  "min_snakemake_version": "6.2.1"
+  "min_snakemake_version": "6.2.1",
+  "scheduler": ["slurm","sge"]
 }
